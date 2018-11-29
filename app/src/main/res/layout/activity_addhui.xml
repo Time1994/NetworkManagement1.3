@@ -1,0 +1,326 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top"
+        android:background="@drawable/bg_color_white"
+        android:layout_margin="@dimen/five">
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fortyf"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/twenty"
+            android:background="@drawable/btn_select"
+            android:text="确认"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_eightheen" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/sure_btn"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fortyf"
+                android:layout_marginTop="2px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="回访进展"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <CheckBox
+                    android:id="@+id/checkbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/five"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="主动联系"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+
+                <CheckBox
+                    android:id="@+id/checkbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已试乘试驾"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+
+                <CheckBox
+                    android:id="@+id/checkbox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已交意向金"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="回访人"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <com.eroadcar.networkmanagement.view.ClearEditText
+                    android:id="@+id/vin_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fortyf"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请填写回访人姓名"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:paddingRight="@dimen/fifteen"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="二网"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <RadioGroup
+                    android:id="@+id/as_rg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fortyf"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/fifteen">
+
+                    <RadioButton
+                        android:id="@+id/man_rb"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/radio_button_select"
+                        android:checked="true"
+                        android:text=" "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <RadioButton
+                        android:id="@+id/woman_rb"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/thirty"
+                        android:background="@null"
+                        android:button="@drawable/radio_button_select"
+                        android:text=" "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="否"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="回访日期"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fortyf"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:paddingRight="@dimen/fifteen"
+                    android:singleLine="true"
+                    android:text="选择计划下次回访日期"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="交流地址"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <com.eroadcar.networkmanagement.view.ClearEditText
+                    android:id="@+id/address_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fortyf"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请填写交流地址"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:paddingRight="@dimen/fifteen"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="回访活动"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <com.eroadcar.networkmanagement.view.ClearEditText
+                    android:id="@+id/huod_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fortyf"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请填写回访活动"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:paddingRight="@dimen/fifteen"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="回访内容"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen" />
+
+                <com.eroadcar.networkmanagement.view.ClearEditText
+                    android:id="@+id/type_cet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fortyf"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请填写回访内容"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:paddingRight="@dimen/fifteen"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_fourteen" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

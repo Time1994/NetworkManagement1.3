@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five"
+                android:background="@drawable/bg_color_white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fifteen"
+                android:paddingTop="@dimen/fifteen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="客户类型"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <RelativeLayout
+                        android:id="@+id/r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/bg_color_gray_k"
+                        android:padding="1px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="选择"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/text_fourteen"
+                            android:visibility="gone" />
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/ten"
+                            android:src="@mipmap/icon_sanjiao_down" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="合同编号"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/he_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入合同编号"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dan_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/dan_tv"
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/dan_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="客户姓名"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/custom_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入客户姓名"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="手机号"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/mobile_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入客户手机号码"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/zheng_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/zheng_tv"
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="证件号码"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/id_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入证件号码"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="地址"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/faz_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入客户居住地址"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tv_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/shenfz_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="请拍摄身份证正面提取信息"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/shenfzf_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="请拍摄身份证反面提取信息"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/jiasz_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="请拍摄驾驶证正面提取信息"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/image_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/shenfz_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_camrea_sfzs" />
+
+                    <ImageView
+                        android:id="@+id/shenfzf_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_camrea_sfzs" />
+
+                    <ImageView
+                        android:id="@+id/jiasz_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_camrea_sfzs" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/bg_color_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:id="@+id/zhi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="付款方式"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <RadioGroup
+                        android:id="@+id/fu_rg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/nian_rb"
+                            android:layout_width="@dimen/twentyf"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/radio_select"
+                            android:checked="true"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="年付"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/ji_rb"
+                            android:layout_width="@dimen/twentyf"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radio_select"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="季付"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/yue_rb"
+                            android:layout_width="@dimen/twentyf"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radio_select"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月付"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/mian_rb"
+                            android:layout_width="@dimen/twentyf"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radio_select"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="免付"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:id="@+id/piao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="开票类型"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <RadioGroup
+                        android:id="@+id/type_rg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/pu_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/radio_select"
+                            android:checked="true"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="普通发票"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/zeng_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radio_select"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="增值税发票"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="发票抬头"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/tit_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入发票抬头"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="客户税号"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/shuihao_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入税号"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="开户银行"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/yinhang_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入开户银行"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="银行账号"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/yinhanghao_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_marginLeft="@dimen/fifteen"
+                        android:layout_marginRight="@dimen/forty"
+                        android:background="@drawable/input_selected"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入银行账号"
+                        android:paddingLeft="@dimen/ten"
+                        android:paddingRight="@dimen/ten"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/bg_color_white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/ten">
+
+                <RelativeLayout
+                    android:id="@+id/select_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车辆信息"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_sanjiao_right" />
+
+                    <ListView
+                        android:id="@+id/car_lv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvc"
+                        android:divider="@color/white"
+                        android:dividerHeight="@dimen/ten"
+                        android:listSelector="@null"
+                        android:scrollbars="none" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/sure_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_margin="@dimen/fortyf"
+                    android:background="@drawable/btn_select"
+                    android:text="提交租赁信息"
+                    android:textColor="@color/color_btn"
+                    android:textSize="@dimen/text_sixteen" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

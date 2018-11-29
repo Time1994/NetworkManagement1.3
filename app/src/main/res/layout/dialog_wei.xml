@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color_white"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/twenty"
+    android:layout_marginRight="@dimen/twenty">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_color_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_color_green"
+                android:gravity="center"
+                android:padding="@dimen/fifteen"
+                android:text="未处理原因"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_sixteen" />
+
+            <ImageView
+                android:id="@+id/close_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/ten"
+                android:src="@mipmap/icon_dialog_close" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="500dp"
+            android:layout_height="1px" />
+
+        <com.eroadcar.networkmanagement.view.ClearEditText
+            android:id="@+id/content_cet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hundredt"
+            android:layout_margin="@dimen/fifteen"
+            android:background="@drawable/bg_color_gray"
+            android:gravity="left|top"
+            android:hint="请输入未处理原因"
+            android:lineSpacingExtra="@dimen/five"
+            android:padding="@dimen/ten"
+            android:textSize="@dimen/text_fourteen" />
+
+
+        <Button
+            android:id="@+id/btn_dialog_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_margin="@dimen/fifteen"
+            android:background="@drawable/btn_select"
+            android:padding="@dimen/ten"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sixteen" />
+    </LinearLayout>
+
+</LinearLayout>

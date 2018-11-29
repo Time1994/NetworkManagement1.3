@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+
+    <RadioGroup
+        android:id="@+id/title_rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/five"
+        android:background="@color/grayef"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/fabu_rb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/five"
+            android:text="发布的任务"
+            android:textColor="@color/color_radiobuttont"
+            android:textSize="@dimen/text_fourteen" />
+
+
+        <TextView
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/grayef" />
+
+        <RadioButton
+            android:id="@+id/jieshou_rb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/five"
+            android:text="接收的任务"
+            android:textColor="@color/color_radiobuttont"
+            android:textSize="@dimen/text_fourteen" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/dot_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/five"
+        android:background="@null"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/five"
+        android:listSelector="@color/transparent" />
+
+    <include
+        android:id="@+id/none"
+        layout="@layout/include_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

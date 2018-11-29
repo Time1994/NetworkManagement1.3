@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/ten"
+    android:background="@drawable/bg_color_white">
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="销售经理"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_fourteen"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="审核状态："
+        android:textColor="@color/blacksix"
+        android:textSize="@dimen/text_fourteen"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="@dimen/five"/>
+    <TextView
+        android:id="@+id/state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_fourteen"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="@dimen/five"
+        android:layout_toRightOf="@id/tv"/>
+
+    <Button
+        android:id="@+id/sure_btn"
+        android:layout_width="@dimen/eighty"
+        android:layout_height="@dimen/thirty"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_select"
+        android:text="选择车辆"
+        android:textColor="@color/color_btn"
+        android:textSize="@dimen/text_fourteen"
+        android:visibility="gone"/>
+</RelativeLayout>

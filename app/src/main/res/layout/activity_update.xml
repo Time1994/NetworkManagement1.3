@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity"
+        layout="@layout/include_toptitle" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="@dimen/eighty"
+            android:layout_height="@dimen/eighty"
+            android:layout_marginTop="@dimen/forty"
+            android:src="@mipmap/icon_logo_add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_sixteen" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/five" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新版本"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_twelve"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/new_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V 1.0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_twelve" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/note_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/twenty"
+            android:background="@drawable/bg_color_white"
+            android:lineSpacingExtra="@dimen/three"
+            android:paddingBottom="@dimen/ten"
+            android:paddingLeft="@dimen/fifteen"
+            android:paddingRight="@dimen/fifteen"
+            android:paddingTop="@dimen/ten"
+            android:text="暂无更新说明"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_twelve" />
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twenty"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@drawable/btn_select"
+            android:text="下载更新"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_eightheen" />
+    </LinearLayout>
+
+</LinearLayout>

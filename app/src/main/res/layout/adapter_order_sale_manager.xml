@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_color_white"
+    android:paddingBottom="@dimen/ten"
+    android:paddingTop="@dimen/ten">
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="客户姓名"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLength="18"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_fourteen" />
+
+    <TextView
+        android:id="@+id/state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="状态"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_fourteen" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="@dimen/five"
+        android:gravity="center"
+        android:text="提交时间"
+        android:textColor="@color/blacksix"
+        android:textSize="@dimen/text_fourteen" />
+
+    <TextView
+        android:id="@+id/emplo_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/state_tv"
+        android:layout_marginTop="@dimen/five"
+        android:gravity="center"
+        android:text="提交人"
+        android:textColor="@color/blacksix"
+        android:textSize="@dimen/text_fourteen" />
+
+</RelativeLayout>

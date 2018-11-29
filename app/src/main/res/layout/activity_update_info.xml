@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.eroadcar.networkmanagement.view.ClearEditText
+            android:id="@+id/name_cet"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fortyf"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/fifteen"
+            android:paddingRight="@dimen/ten"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_sixteen"
+            android:layout_marginTop="@dimen/ten"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

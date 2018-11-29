@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/five">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+        android:src="@mipmap/icon_camrea_sfzs"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/remark_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five"
+        android:singleLine="true"
+        android:text="车型："
+        android:textColor="@color/blacksix"
+        android:textSize="@dimen/text_fourteen" />
+
+
+</LinearLayout>

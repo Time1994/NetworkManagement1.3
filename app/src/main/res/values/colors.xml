@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="green">#34A1FF</color>
+    <color name="red">#ED0000</color>
+    <color name="redo">#FF6B6B</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#333333</color>
+    <color name="blacksix">#666666</color>
+    <color name="grayef">#efefef</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="blue">#62B033</color>
+    <color name="purple">#717AFA</color>
+    <color name="yellow">#FFB83B</color>
+    <color name="orange">#FF825F</color>
+</resources>

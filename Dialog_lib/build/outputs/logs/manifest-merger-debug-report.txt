@@ -1,0 +1,15 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml:1:1-8:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml:1:1-8:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml:1:1-8:12
+	package
+		ADDED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml:2:9-43
+		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml
+		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml:3:9-67
+application
+ADDED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml:5:5-6:19
+	android:allowBackup
+		ADDED from E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\AndroidManifest.xml:5:18-44

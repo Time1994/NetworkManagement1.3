@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical"
+    android:padding="@dimen/ten" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="期望提车时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_sixteen" />
+
+        <ImageView
+            android:id="@+id/cancel_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_dialog_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/hundredforty"
+        android:layout_marginTop="@dimen/twenty" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/hundredforty"
+            android:background="@drawable/bg_color_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/three"
+            android:weightSum="4" >
+
+            <com.eroadcar.networkmanagement.view.widget.WheelView
+                android:id="@+id/mins"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="@color/gray" />
+
+            <com.eroadcar.networkmanagement.view.widget.WheelView
+                android:id="@+id/data"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="@color/gray" />
+
+            <com.eroadcar.networkmanagement.view.widget.WheelView
+                android:id="@+id/hour"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/thirty"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_date_select" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sure_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fortyf"
+        android:layout_marginTop="@dimen/fifteen"
+        android:background="@drawable/btn_select"
+        android:text="确认修改"
+        android:textColor="@color/color_btn"
+        android:textSize="@dimen/text_eightheen" />
+
+</LinearLayout>

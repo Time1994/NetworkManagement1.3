@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_color_white"
+    android:orientation="horizontal"
+    android:padding="@dimen/ten">
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="销售经理"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_fourteen" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="@dimen/five"
+        android:gravity="center"
+        android:text="账号："
+        android:textColor="@color/blacksix"
+        android:textSize="@dimen/text_fourteen" />
+
+    <TextView
+        android:id="@+id/id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv"
+        android:layout_toRightOf="@id/tv"
+        android:gravity="center"
+        android:text="9004001"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_sixteen" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_tv"
+        android:layout_marginTop="@dimen/five"
+        android:gravity="center"
+        android:text="当前身份："
+        android:textColor="@color/blacksix"
+        android:textSize="@dimen/text_fourteen" />
+
+    <TextView
+        android:id="@+id/tit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv1"
+        android:layout_toRightOf="@id/tv1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="未分配"
+        android:textColor="@color/blacksix"
+        android:textSize="@dimen/text_fourteen" />
+
+
+    <Button
+        android:id="@+id/role_btn"
+        android:layout_width="@dimen/eighty"
+        android:layout_height="@dimen/thirty"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_select"
+        android:text="分配权限"
+        android:textColor="@color/color_btn"
+        android:textSize="@dimen/text_fourteen" />
+
+</RelativeLayout>

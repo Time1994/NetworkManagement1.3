@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.eroadcar.networkmanagement"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 2
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        useLibrary'org.apache.http.legacy'
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "a3003c9c5942bd5452973919", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/ocr-sdk.jar')
+    implementation project(':ocr_ui')
+    compile 'cn.jiguang.sdk:jpush:3.1.6'
+    // 此处以JPush 3.1.6 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.2.5'
+    // 此处以JCore 1.2.5 版本为例。
+    implementation files('libs/volleryagson.jar')
+    implementation project(':Dialog_lib')
+    implementation project(':xUtiLib')
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation project(':core')
+    implementation project(':uiasr')
+    implementation project(':uidialog')
+    compile 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+    compile 'com.google.zxing:core:3.2.0'
+    implementation files('libs/bugly_crash_release.jar')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //    implementation group: 'net.sourceforge.jexcelapi', name: 'jxl', version: '2.6.12'
+    implementation files('libs/jxl.jar')
+
+    implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
+}

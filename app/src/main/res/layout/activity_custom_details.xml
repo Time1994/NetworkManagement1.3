@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/five"
+        android:background="@drawable/bg_color_white">
+
+        <ImageView
+            android:id="@+id/custom_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/ten"
+            android:src="@mipmap/icon_custom_man" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/custom_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="筱筱雪 女士"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/mobile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:text="18602101879"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tel_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/twenty"
+            android:src="@mipmap/icon_custom_tel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:background="@drawable/bg_color_white">
+
+        <RadioGroup
+            android:id="@+id/title_rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_marginTop="@dimen/five"
+            android:background="@color/grayef"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/info_rb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="@dimen/five"
+                android:text="客户信息"
+                android:textColor="@color/color_radiobuttont"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/grayef" />
+
+            <RadioButton
+                android:id="@+id/huif_rb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/five"
+                android:text="跟踪信息"
+                android:textColor="@color/color_radiobuttont"
+                android:textSize="@dimen/text_fourteen" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/title_rg"
+            android:background="@color/grayef" />
+
+        <LinearLayout
+            android:id="@+id/info_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/ten">
+
+            <TextView
+                android:id="@+id/dengji_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtyf"
+                android:gravity="center_vertical"
+                android:text="客户等级:A"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/leix_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtyf"
+                android:gravity="center_vertical"
+                android:text="客户类型:意向"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/yix_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtyf"
+                android:gravity="center_vertical"
+                android:text="意向车型:意向"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtyf"
+                android:gravity="center_vertical"
+                android:text="登记日期:2018-9-17"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/rem_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtyf"
+                android:gravity="center_vertical"
+                android:text="备注"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <Button
+                android:id="@+id/sure_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/forty"
+                android:layout_margin="@dimen/thirty"
+                android:background="@drawable/btn_select"
+                android:text="修改资料"
+                android:textColor="@color/color_btn"
+                android:textSize="@dimen/text_sixteen" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/hui_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv"
+            android:layout_marginBottom="@dimen/ten"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/addh_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/ten">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/ten"
+                    android:src="@mipmap/icon_custom_addh" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="新增一条跟踪信息"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_twelve" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_above="@id/addh_ll"
+                android:background="@color/grayef" />
+
+            <ListView
+                android:id="@+id/hui_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/line"
+                android:layout_alignParentTop="true"
+                android:listSelector="@color/transparent"
+                android:background="@null"></ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

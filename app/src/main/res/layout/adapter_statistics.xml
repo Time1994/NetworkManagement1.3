@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_color_white"
+    android:padding="@dimen/ten">
+
+    <TextView
+        android:id="@+id/store_tv"
+        android:layout_width="@dimen/fifityf"
+        android:layout_height="@dimen/fifityf"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_color_green"
+        android:gravity="center"
+        android:text="上海英枫"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_sixteen"
+        android:padding="@dimen/five"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_toRightOf="@id/store_tv"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="营业收入："
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_sixteen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="元"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/five">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="新增客户: "
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_sixteen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="人"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

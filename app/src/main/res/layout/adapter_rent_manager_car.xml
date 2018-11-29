@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/tit_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten">
+
+        <CheckBox
+            android:id="@+id/choose_cb"
+            android:layout_width="@dimen/thirty"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/car_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/choose_cb"
+            android:text="车型：未选择"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen"
+            android:layout_marginLeft="@dimen/five"/>
+
+        <ImageView
+            android:id="@+id/sanjiao_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:src="@mipmap/icon_sanjiao_down" />
+
+
+        <TextView
+            android:id="@+id/pai_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_toRightOf="@id/car_tv"
+            android:text="车牌：未选择"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/con_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/thirtyf"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/color_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="颜色：未选择"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen" />
+
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="价格：未选择"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:id="@+id/vin_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="车架号：未选择"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:id="@+id/cdzaddress_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:singleLine="true"
+            android:text="充电桩地址：未选择"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="租赁时间：未选择"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="状态："
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已交车"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/jtime_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="@dimen/twenty"
+                android:text="交车时间"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

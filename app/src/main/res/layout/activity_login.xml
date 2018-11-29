@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.eroadcar.networkmanagement.activity.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/forty"
+        android:background="@drawable/bg_color_whiteo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/app_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/seventy"
+            android:background="@drawable/bg_login_title"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_twenty" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:src="@mipmap/icon_login_store" />
+
+            <com.eroadcar.networkmanagement.view.ClearEditText
+                android:id="@+id/store_cet"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/forty"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入门店编号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/ten"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@color/grayef" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:src="@mipmap/icon_login_user" />
+
+            <com.eroadcar.networkmanagement.view.ClearEditText
+                android:id="@+id/employee_cet"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/forty"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入员工编号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/ten"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@color/grayef" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:src="@mipmap/icon_login_pwd" />
+
+            <com.eroadcar.networkmanagement.view.ClearEditText
+                android:id="@+id/pwd_cet"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/forty"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/ten"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@color/grayef" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/twentyf"
+            android:background="@drawable/btn_select"
+            android:enabled="false"
+            android:text="@string/login"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_sixteen" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:padding="@dimen/ten">
+
+            <CheckBox
+                android:id="@+id/choose_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/choose_cb"
+                android:text="记住密码"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_twelve" />
+
+            <TextView
+                android:id="@+id/forget_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="忘记密码"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_twelve" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加盟热线"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_twelve" />
+        <TextView
+            android:id="@+id/tel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="400-9200-665"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_fourteen" />
+    </LinearLayout>
+
+</RelativeLayout>

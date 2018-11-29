@@ -1,0 +1,782 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <Button
+        android:id="@+id/show_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:drawablePadding="@dimen/five"
+        android:gravity="right|center_vertical"
+        android:padding="@dimen/ten"
+        android:text="车型展示"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_fourteen" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fifity"
+            android:layout_margin="@dimen/ten"
+            android:background="@drawable/btn_select"
+            android:text="确认添加"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_eightheen" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/top"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rent_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/grayef"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/fifteen">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车型："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.MyGridView
+                        android:id="@+id/typer_gv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/ten"
+                        android:listSelector="@color/transparent"
+                        android:numColumns="2"
+                        android:scrollbars="none"
+                        android:verticalSpacing="@dimen/ten"></com.eroadcar.networkmanagement.view.MyGridView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="颜色："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.MyGridView
+                        android:id="@+id/colorr_gv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/forty"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/ten"
+                        android:listSelector="@color/transparent"
+                        android:numColumns="3"
+                        android:scrollbars="none"
+                        android:verticalSpacing="@dimen/ten"></com.eroadcar.networkmanagement.view.MyGridView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/kucun_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="库存数量："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <TextView
+                        android:id="@+id/kucun_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0辆"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <TextView
+                        android:id="@+id/kucunno_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:text="库存不足"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_fourteen"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="租赁数量："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/rnum_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="填写租赁数量"
+                        android:numeric="integer"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="租赁价格："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/zlprice_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请填写租赁价格(元/年)"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="押金金额："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/ya_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请填写押金金额"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车牌号："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/pai_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请填写车牌"
+                        android:maxLength="9"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:id="@+id/cj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="车架号："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/vin_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/cj"
+                        android:background="@null"
+                        android:hint="请填写车架号"
+                        android:singleLine="true"
+                        android:text="LVVD"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen"
+                        android:visibility="gone" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/owner_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/cj"
+                        android:background="@color/white"
+                        android:completionThreshold="1"
+                        android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:dropDownHorizontalOffset="@dimen/twenty"
+                        android:gravity="center_vertical"
+                        android:hint="请填写车架号"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:paddingLeft="@dimen/fifteen"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen"></AutoCompleteTextView>
+
+                    <ImageView
+                        android:id="@+id/camrea_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/five"
+                        android:src="@mipmap/icon_camrea" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上牌登记日期："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+
+                    <TextView
+                        android:id="@+id/datedj_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/ten"
+                        android:text="选择登记日期"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_fourteen" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="租赁时间："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/dates_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="选择起始时间"
+                            android:textColor="@color/blacksix"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grayef" />
+
+                        <TextView
+                            android:id="@+id/datee_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="选择结束时间"
+                            android:textColor="@color/blacksix"
+                            android:textSize="@dimen/text_fourteen" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/time_rg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RadioButton
+                            android:id="@+id/oney_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:checked="true"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1  年"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/threey_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3  年"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/fivey_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5  年"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="保险日期："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/datebs_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="选择起始日期"
+                            android:textColor="@color/blacksix"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/grayef" />
+
+                        <TextView
+                            android:id="@+id/datebe_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="选择结束日期"
+                            android:textColor="@color/blacksix"
+                            android:textSize="@dimen/text_fourteen" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/zulin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="租赁："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <RadioGroup
+                        android:id="@+id/price_rg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/pos_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:checked="true"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="定金"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/ebank_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="全款"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+                    </RadioGroup>
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/amount_cet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_toLeftOf="@id/price_rg"
+                        android:layout_toRightOf="@id/zulin"
+                        android:background="@null"
+                        android:hint="填写金额(元)"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付方式："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <RadioGroup
+                        android:id="@+id/paymentr_rg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/posr_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:checked="true"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="POS"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/ebankr_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="网银"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <RadioButton
+                            android:id="@+id/cashr_rb"
+                            android:layout_width="@dimen/thirty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_twelve"
+                            android:background="@null"
+                            android:button="@drawable/radiobutton_select"
+                            android:text=" "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="现金"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_fourteen" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="充电桩地址："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+                    <ImageView
+                        android:id="@+id/yuyin_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/fifteen"
+                        android:src="@mipmap/icon_yuyin" />
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/address_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/yuyin_iv"
+                        android:layout_toRightOf="@id/tv"
+                        android:background="@null"
+                        android:hint="填写安装地址"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <TextView
+                        android:id="@+id/tvr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="备注："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_fourteen" />
+
+
+                    <com.eroadcar.networkmanagement.view.ClearEditText
+                        android:id="@+id/remark_cet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tvr"
+                        android:background="@null"
+                        android:hint="请填写备注信息"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grayef"
+                        android:textSize="@dimen/text_fourteen" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/selectr_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fifity"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="选择提车网点"
+                    android:padding="@dimen/ten"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_fourteen"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">翼禄门店版</string>
+    <string name="loading">数据加载中...</string>
+    <string name="dialog_title">温馨提示</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="login">登 录</string>
+    <string name="role">权限分配</string>
+    <string name="save">保 存</string>
+    <string name="updatepwd">修改密码</string>
+    <string name="exit_app">再按一次退出程序</string>
+    <string name="add_user">新建子账号</string>
+    <string name="add">新建</string>
+    <string name="personal">个人资料</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about">关于我们</string>
+    <string name="exit">退出登录</string>
+    <string name="submit">提交</string>
+    <string name="name">姓名</string>
+    <string name="moble">手机号</string>
+    <string name="version">版本升级</string>
+    <string name="done">完成</string>
+    <string name="tool">实用小工具</string>
+    <string name="cars">车型展示</string>
+    <string name="custom">客户管理</string>
+    <string name="sale_manager">销售管理</string>
+    <string name="shibie"> 没有识别到相关信息，请重新拍照</string>
+
+
+</resources>

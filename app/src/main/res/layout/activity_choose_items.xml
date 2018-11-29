@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity"
+        layout="@layout/include_toptitle" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grayef"
+        android:padding="@dimen/ten"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:text="累计添加项目"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/text_sixteen" />
+
+        <TextView
+            android:id="@+id/fee_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/five"
+            android:text="500元"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/text_sixteen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/fee_tv"
+            android:text="共计费："
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/text_sixteen" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/grayef" >
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fifity"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/ten"
+            android:background="@drawable/btn_select"
+            android:text="确认项目"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_eightheen" />
+
+        <ListView
+            android:id="@+id/dot_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/sure_btn"
+            android:layout_marginBottom="@dimen/twenty"
+            android:background="@color/grayef"
+            android:divider="@drawable/bg_line_d"
+            android:listSelector="@color/transparent"
+            android:layout_marginTop="@dimen/five">
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

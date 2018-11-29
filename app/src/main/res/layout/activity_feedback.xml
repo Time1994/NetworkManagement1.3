@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/bg_color_white"
+        android:layout_margin="@dimen/five">
+
+        <com.eroadcar.networkmanagement.view.ClearEditText
+            android:id="@+id/contont_cet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hundredf"
+            android:layout_margin="@dimen/ten"
+            android:background="@drawable/bg_color_gray"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:hint="请留下您的宝贵意见……"
+            android:paddingLeft="@dimen/ten"
+            android:paddingTop="@dimen/five"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_fourteen" />
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fortyf"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/forty"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty"
+            android:background="@drawable/btn_select"
+            android:text="@string/submit"
+            android:textColor="@color/color_btn"
+            android:enabled="false"
+            android:textSize="@dimen/text_sixteen" />
+    </RelativeLayout>
+
+</LinearLayout>

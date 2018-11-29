@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/ten">
+
+    <RelativeLayout
+        android:layout_width="@dimen/fortyf"
+        android:layout_height="@dimen/fortyf">
+
+        <ImageView
+            android:id="@+id/img_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_home_saleb" />
+
+        <TextView
+            android:id="@+id/num_tv"
+            android:layout_width="@dimen/twenty"
+            android:layout_height="@dimen/twenty"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_color_red"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_twelve" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="销售管理"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_twelve"
+        android:layout_marginTop="@dimen/five"/>
+
+</LinearLayout>

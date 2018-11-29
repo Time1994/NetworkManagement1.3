@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/ten" >
+
+    <ExpandableListView
+        android:id="@+id/city_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:background="@color/white"
+        android:divider="@color/gray"
+        android:dividerHeight="1px"
+        android:listSelector="@color/transparent"/>
+
+</LinearLayout>

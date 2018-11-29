@@ -1,0 +1,263 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten"
+        android:background="@drawable/bg_color_white"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="状态："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:id="@+id/state_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv"
+            android:text="订单征信中"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_fourteen" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_sanjiao_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:background="@drawable/bg_color_white"
+        android:orientation="vertical"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv"
+            android:text="基本信息"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_fourteen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="姓名"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+
+                <TextView
+                    android:id="@+id/sex_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="性别"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="联系方式"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="职位"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+
+                <TextView
+                    android:id="@+id/store_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="门店"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="入职时间"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_twelve" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten"
+        android:background="@drawable/bg_color_white"
+        android:orientation="vertical"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv"
+            android:text="目标"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="本月完成目标"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:id="@+id/saley_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="销售："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_twelve" />
+
+        <TextView
+            android:id="@+id/renty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="租赁："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_twelve" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:text="设置本月目标"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_fourteen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sales_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="销售："
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twelve" />
+
+            <com.eroadcar.networkmanagement.view.ClearEditText
+                android:id="@+id/sale_cet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="请输入目标"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twelve" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rents_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="租赁："
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twelve" />
+
+            <com.eroadcar.networkmanagement.view.ClearEditText
+                android:id="@+id/rent_cet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="请输入目标"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_twelve" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_marginLeft="@dimen/forty"
+            android:layout_marginRight="@dimen/forty"
+            android:layout_marginTop="@dimen/thirty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:background="@drawable/btn_select"
+            android:text="提交"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_sixteen" />
+    </LinearLayout>
+
+</LinearLayout>

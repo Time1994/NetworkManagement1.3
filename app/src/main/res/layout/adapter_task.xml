@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/ten"
+    android:paddingLeft="@dimen/ten"
+    android:paddingRight="@dimen/ten"
+    android:paddingTop="@dimen/ten"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_fourteen" />
+
+        <TextView
+            android:id="@+id/state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="已登录"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_twelve" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five">
+
+        <TextView
+            android:id="@+id/tit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="销售顾问"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_fourteen"
+            android:layout_marginRight="@dimen/ten"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_sanjiao_right" />
+    </RelativeLayout>
+</LinearLayout>

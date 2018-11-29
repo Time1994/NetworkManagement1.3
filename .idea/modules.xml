@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Dialog_lib/Dialog_lib.iml" filepath="$PROJECT_DIR$/Dialog_lib/Dialog_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NetworkManagement1.1.iml" filepath="$PROJECT_DIR$/NetworkManagement1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uiasr/uiasr.iml" filepath="$PROJECT_DIR$/uiasr/uiasr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uidialog/uidialog.iml" filepath="$PROJECT_DIR$/uidialog/uidialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xUtiLib/xUtiLib.iml" filepath="$PROJECT_DIR$/xUtiLib/xUtiLib.iml" />
+    </modules>
+  </component>
+</project>

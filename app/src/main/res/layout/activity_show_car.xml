@@ -1,0 +1,246 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity"
+        layout="@layout/include_toptitle" />
+
+    <RelativeLayout
+        android:id="@+id/dao_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fortyf"
+        android:layout_below="@id/top"
+        android:background="#fafbf8" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="4px"
+            android:layout_alignParentBottom="true"
+            android:background="#dae2d1" />
+
+        <RadioGroup
+            android:id="@+id/as_rg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <RadioButton
+                android:id="@+id/wai_rb"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rw_title_selected"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:tag="radio_button0"
+                android:text="外观"
+                android:textColor="@color/color_radio"
+                android:textSize="@dimen/text_fourteen" />
+
+            <RadioButton
+                android:id="@+id/nei_rb"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rw_title_selected"
+                android:button="@null"
+                android:gravity="center"
+                android:tag="radio_button1"
+                android:text="内饰"
+                android:textColor="@color/color_radio"
+                android:textSize="@dimen/text_fourteen" />
+
+            <RadioButton
+                android:id="@+id/xi_rb"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rw_title_selected"
+                android:button="@null"
+                android:gravity="center"
+                android:tag="radio_button1"
+                android:text="细节"
+                android:textColor="@color/color_radio"
+                android:textSize="@dimen/text_fourteen" />
+
+            <RadioButton
+                android:id="@+id/can_rb"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rw_title_selected"
+                android:button="@null"
+                android:gravity="center"
+                android:tag="radio_button1"
+                android:text="参数"
+                android:textColor="@color/color_radio"
+                android:textSize="@dimen/text_fourteen" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/show_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:background="@color/grayef"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/fifteen"
+        android:visibility="gone" 
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车型："
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <com.eroadcar.networkmanagement.view.MyGridView
+                android:id="@+id/typer_gv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/ten"
+                android:listSelector="@color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/ten" >
+            </com.eroadcar.networkmanagement.view.MyGridView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="颜色："
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <com.eroadcar.networkmanagement.view.MyGridView
+                android:id="@+id/colorr_gv"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/forty"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/ten"
+                android:listSelector="@color/transparent"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/ten" >
+            </com.eroadcar.networkmanagement.view.MyGridView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kucun_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fifity"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="库存数量："
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/kucun_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0辆"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/kucunno_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:text="库存不足"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_fourteen"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fortyf"
+            android:layout_margin="@dimen/ten"
+            android:background="@drawable/btn_select"
+            android:text="确 认"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_eightheen" />
+    </LinearLayout>
+
+    <com.eroadcar.networkmanagement.view.MyGridView
+        android:id="@+id/show_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dao_rl"
+        android:gravity="top"
+        android:horizontalSpacing="@dimen/ten"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:paddingTop="@dimen/twenty"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/ten" >
+    </com.eroadcar.networkmanagement.view.MyGridView>
+
+    <LinearLayout
+        android:id="@+id/none_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@id/dao_rl" 
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hundred"
+            android:src="@mipmap/icon_none_logo" />
+
+        <TextView
+            android:id="@+id/note_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen"
+            android:text="暂无数据"
+            android:textColor="#d3d9cd"
+            android:textSize="@dimen/text_eightheen" />
+    </LinearLayout>
+
+</RelativeLayout>

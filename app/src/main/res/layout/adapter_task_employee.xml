@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/five">
+
+    <ImageView
+        android:id="@+id/state_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/three"
+        android:src="@mipmap/icon_task_yi" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ten"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_fourteen" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="状态："
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_fourteen" />
+
+            <TextView
+                android:id="@+id/state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_fourteen" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/reason_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:text="已登录"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_twelve" />
+    </LinearLayout>
+</LinearLayout>

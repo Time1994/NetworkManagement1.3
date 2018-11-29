@@ -1,0 +1,270 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/five"
+        android:background="@drawable/bg_color_white"
+        android:orientation="vertical"
+        android:padding="@dimen/five">
+
+        <LinearLayout
+            android:id="@+id/img_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/sfzz_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ninty"
+                android:layout_marginRight="@dimen/five"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_camrea_sfzs"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/sfzf_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ninty"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_camrea_sfzs"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="身份证正面"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_twelve" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="身份证反面"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_twelve" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/fap_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ninty"
+                android:layout_marginRight="@dimen/five"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_camrea_sfzs"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/chanz_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ninty"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_camrea_sfzs"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发票"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_twelve" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="车辆产证"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_twelve" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/xsz_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ninty"
+                android:layout_marginRight="@dimen/five"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_camrea_sfzs"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ninty"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_camrea_sfzs"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="行驶证"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_twelve" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="车辆产证"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_twelve"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/fifteen">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="车架号"
+                android:textColor="@color/blacksix"
+                android:textSize="@dimen/text_fourteen"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/twenty"/>
+
+            <ImageView
+                android:id="@+id/camrea_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_camrea"
+                android:layout_marginRight="@dimen/fifteen"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+            <com.eroadcar.networkmanagement.view.ClearEditText
+                android:id="@+id/custom_cet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:background="@drawable/input_selected"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入车辆的车架号"
+                android:text="LVVD"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_fourteen"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv"
+                android:layout_toLeftOf="@id/camrea_iv"
+                android:visibility="gone"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/owner_cet"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/thirty"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/fifteen"
+                android:background="@drawable/input_selected"
+                android:completionThreshold="1"
+                android:inputType="text"
+                android:maxLength="20"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:dropDownHorizontalOffset="@dimen/twenty"
+                android:gravity="center_vertical"
+                android:hint="请填写车架号"
+
+                android:paddingLeft="@dimen/fifteen"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grayef"
+                android:textSize="@dimen/text_fourteen"
+                android:layout_toRightOf="@id/tv"
+                android:layout_toLeftOf="@id/camrea_iv"
+                android:layout_centerVertical="true">
+            </AutoCompleteTextView>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_margin="@dimen/twentyf"
+            android:background="@drawable/btn_select"
+            android:text="@string/save"
+            android:textColor="@color/color_btn"
+            android:textSize="@dimen/text_sixteen" />
+    </LinearLayout>
+
+
+</LinearLayout>

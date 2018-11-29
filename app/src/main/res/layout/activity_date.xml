@@ -1,0 +1,168 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_toptitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/three"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/ten">
+
+
+        <RadioGroup
+            android:id="@+id/time_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/day_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton_select"
+                android:button="@null"
+                android:checked="true"
+                android:paddingBottom="@dimen/three"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:paddingTop="@dimen/three"
+                android:text="按日"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/text_twelve" />
+
+            <RadioButton
+                android:id="@+id/month_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton_select"
+                android:button="@null"
+                android:paddingBottom="@dimen/three"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:paddingTop="@dimen/three"
+                android:text="按月"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/text_twelve" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/day_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/fifteen">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/start_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-11-01"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_sixteen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fifteen"
+                    android:text="至"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_sixteen" />
+
+                <TextView
+                    android:id="@+id/end_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-11-01"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_sixteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/hundredforty"
+                android:layout_marginTop="@dimen/twenty"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <com.eroadcar.networkmanagement.view.widget.WheelView
+                    android:id="@+id/mins"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.2" />
+
+                <com.eroadcar.networkmanagement.view.widget.WheelView
+                    android:id="@+id/data"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.4" />
+
+                <com.eroadcar.networkmanagement.view.widget.WheelView
+                    android:id="@+id/hour"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.4" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/month_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/fifteen"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/cur_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-11"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_sixteen"
+                android:layout_margin="@dimen/fifteen"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/hundredforty"
+                android:layout_marginTop="@dimen/twenty"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.eroadcar.networkmanagement.view.widget.WheelView
+                    android:id="@+id/year"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.3" />
+
+                <com.eroadcar.networkmanagement.view.widget.WheelView
+                    android:id="@+id/month"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.7" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

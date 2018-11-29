@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_color_white">
+
+    <RadioGroup
+        android:id="@+id/state_rg"
+        android:layout_width="@dimen/hundredthirty"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/five">
+
+        <RadioButton
+            android:id="@+id/all_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_pop_select"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/ten"
+            android:paddingLeft="@dimen/twenty"
+            android:paddingRight="@dimen/twenty"
+            android:paddingTop="@dimen/ten"
+            android:text="全 部"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/ing_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_pop_select"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/ten"
+            android:paddingLeft="@dimen/twenty"
+            android:paddingRight="@dimen/twenty"
+            android:paddingTop="@dimen/ten"
+            android:text="征信中"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/tong_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_pop_select"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/ten"
+            android:paddingLeft="@dimen/twenty"
+            android:paddingRight="@dimen/twenty"
+            android:paddingTop="@dimen/ten"
+            android:text="征信通过"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/bohui_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_pop_select"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/ten"
+            android:paddingLeft="@dimen/twenty"
+            android:paddingRight="@dimen/twenty"
+            android:paddingTop="@dimen/ten"
+            android:text="征信驳回"
+            android:textColor="@color/black" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

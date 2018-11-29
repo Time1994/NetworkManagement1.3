@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayef"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.eroadcar.networkmanagement.activity.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifity"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/setting_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:src="@mipmap/icon_home_setting" />
+
+        <TextView
+            android:id="@+id/store_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="英枫店"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_eightheen" />
+
+        <RelativeLayout
+            android:id="@+id/msg_rl"
+            android:layout_width="@dimen/fifity"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ten">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/five"
+                android:src="@mipmap/icon_msg" />
+
+            <TextView
+                android:id="@+id/msg_tv"
+                android:layout_width="@dimen/fifteen"
+                android:layout_height="@dimen/fifteen"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/bg_color_red"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_twelve"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/note_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/three"
+        android:background="@color/white"
+        android:padding="@dimen/ten"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_fourteen" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/three"
+        android:background="@color/white"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2018/9/10"
+            android:textColor="@color/blacksix"
+            android:textSize="@dimen/text_fourteen" />
+
+        <RadioGroup
+            android:id="@+id/time_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/day_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton_select"
+                android:button="@null"
+                android:checked="true"
+                android:padding="@dimen/five"
+                android:text="日统计"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/text_twelve" />
+
+            <RadioButton
+                android:id="@+id/month_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton_select"
+                android:button="@null"
+                android:padding="@dimen/five"
+                android:text="月统计"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/text_twelve" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hundredthirty"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/sale_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/sale_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:src="@mipmap/icon_home_sale" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_toRightOf="@id/sale_iv">
+
+                    <TextView
+                        android:id="@+id/sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="销售"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/sale_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:layout_marginTop="@dimen/mthree"
+                        android:layout_toRightOf="@id/sale"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/sale_tv"
+                        android:text="辆"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/salem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sale_tv"
+                        android:layout_marginTop="@dimen/five"
+                        android:text="¥"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/salem_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/salem"
+                        android:layout_marginBottom="@dimen/mthree"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:layout_toRightOf="@id/salem"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/salem"
+                        android:layout_toRightOf="@id/salem_tv"
+                        android:text="元"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/grayef" />
+
+            <RelativeLayout
+                android:id="@+id/wei_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/wei_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:src="@mipmap/icon_home_wei" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_toRightOf="@id/wei_iv">
+
+                    <TextView
+                        android:id="@+id/wei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="维修"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/wei_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:layout_marginTop="@dimen/mthree"
+                        android:layout_toRightOf="@id/wei"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:id="@+id/dan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/wei_tv"
+                        android:text="单"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/weim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wei_tv"
+                        android:layout_marginTop="@dimen/five"
+                        android:text="¥"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/weim_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/weim"
+                        android:layout_marginBottom="@dimen/mthree"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:layout_toRightOf="@id/weim"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/weim"
+                        android:layout_toRightOf="@id/weim_tv"
+                        android:text="元"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/grayef" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/rent_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/rent_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:src="@mipmap/icon_home_rent" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_toRightOf="@id/rent_iv">
+
+                    <TextView
+                        android:id="@+id/rent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="租赁"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/rent_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:layout_marginTop="@dimen/mthree"
+                        android:layout_toRightOf="@id/rent"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/rent_tv"
+                        android:text="辆"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/rentm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rent_tv"
+                        android:layout_marginTop="@dimen/five"
+                        android:text="¥"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/rentm_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/rentm"
+                        android:layout_marginBottom="@dimen/mthree"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:layout_toRightOf="@id/rentm"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/rentm"
+                        android:layout_toRightOf="@id/rentm_tv"
+                        android:text="元"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/grayef" />
+
+            <RelativeLayout
+                android:id="@+id/custom_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/custom_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:src="@mipmap/icon_custom" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_toRightOf="@id/custom_iv">
+
+                    <TextView
+                        android:id="@+id/custom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新增客户"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve" />
+
+                    <TextView
+                        android:id="@+id/custom_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/custom"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sixteen"
+                        android:layout_marginTop="@dimen/three"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/custom_tv"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_toRightOf="@id/custom_tv"
+                        android:text="人"
+                        android:textColor="@color/blacksix"
+                        android:textSize="@dimen/text_twelve"
+                        android:layout_marginBottom="@dimen/three"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/home_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ten"
+        android:background="@drawable/bg_color_white"
+        android:numColumns="2"
+        android:scrollbars="none"/>
+</LinearLayout>

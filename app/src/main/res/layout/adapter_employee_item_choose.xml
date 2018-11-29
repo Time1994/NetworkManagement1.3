@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/ten">
+
+
+    <ImageView
+        android:id="@+id/check_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_yuan" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="@dimen/seventy"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_toRightOf="@id/check_iv"
+        android:singleLine="true"
+        android:text="姓名"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_twelve" />
+
+    <TextView
+        android:id="@+id/state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="已登录"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_twelve" />
+
+</LinearLayout>
