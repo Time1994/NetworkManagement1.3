@@ -16,7 +16,7 @@ public class LoadingActivity extends BaseActivity {
 		super.onCreate(arg0);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		setContentView(R.layout.activity_loading);
+//		setContentView(R.layout.activity_loading);
 
 		setSwipeBackEnable(false);
 
@@ -28,7 +28,7 @@ public class LoadingActivity extends BaseActivity {
 			public void run() {
 				try {
 					// Looper.prepare();
-					Thread.sleep(1500);
+					Thread.sleep(1000);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

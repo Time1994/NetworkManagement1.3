@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/taotao/AndroidStudioProjects/NetworkManagement1.1/Dialog_lib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/taotao/AndroidStudioProjects/NetworkManagement1.1/Dialog_lib/build-types/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\android_studio_workspace\NetworkManagement1.1\Dialog_lib\build-types\debug\shaders"/></dataSet></merger>

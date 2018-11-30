@@ -26,6 +26,36 @@
         <!-- &lt;!&ndash;背景透明&ndash;&gt; -->
     </style>
 
+    <style name="AppThemes" parent="Theme.AppCompat.DayNight.NoActionBar">    <!-- All customizations that are NOT specific to a particular API-level can go here. -->        <!-- 启动时页面为透明色，避免显示空白页，好像有问题，还是空白页 -->
+        <!--<item name="android:windowIsTranslucent">true</item>    &lt;!&ndash; 这个起作用，启动时有点延时，实际就是加载了透明的背景，如微信6.3.28 &ndash;&gt;-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>      &lt;!&ndash; 设置启动背景图片，避免显示空白页，如支付宝9.9.5 &ndash;&gt;  -->
+        <item name="android:windowBackground">@drawable/bg_login</item>
+        隐藏标题栏
+        <item name="android:windowNoTitle">true</item>    <!-- 隐藏状态栏 -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppThemess" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!--欢迎页面主题-->
+    <style name="AppTheme.NoActionBar.FullScreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/icon_loading</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="AnimHorizontal" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/push_scale_left_in</item>
         <item name="android:windowExitAnimation">@anim/push_scale_left_out</item>
