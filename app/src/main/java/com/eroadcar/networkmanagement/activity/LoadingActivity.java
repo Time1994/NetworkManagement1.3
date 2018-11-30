@@ -1,7 +1,6 @@
 package com.eroadcar.networkmanagement.activity;
 
 import com.eroadcar.networkmanagement.MyApplication;
-import com.eroadcar.networkmanagement.R;
 
 import android.os.Bundle;
 import android.os.Handler;
