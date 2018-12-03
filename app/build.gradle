@@ -40,9 +40,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/ocr-sdk.jar')
     implementation project(':ocr_ui')
-    compile 'cn.jiguang.sdk:jpush:3.1.6'
+    implementation 'cn.jiguang.sdk:jpush:3.1.6'
     // 此处以JPush 3.1.6 版本为例。
-    compile 'cn.jiguang.sdk:jcore:1.2.5'
+    implementation 'cn.jiguang.sdk:jcore:1.2.5'
     // 此处以JCore 1.2.5 版本为例。
     implementation files('libs/volleryagson.jar')
     implementation project(':Dialog_lib')
@@ -53,10 +53,10 @@ dependencies {
     implementation project(':core')
     implementation project(':uiasr')
     implementation project(':uidialog')
-    compile 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
-    compile 'com.google.zxing:core:3.2.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+    implementation 'com.google.zxing:core:3.2.0'
     implementation files('libs/bugly_crash_release.jar')
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
     //    implementation group: 'net.sourceforge.jexcelapi', name: 'jxl', version: '2.6.12'
     implementation files('libs/jxl.jar')
 

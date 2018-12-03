@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-8:12
+ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:2:1-7:12
 	package
 		ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:3:11-39
 		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
@@ -21,19 +21,19 @@ INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\
 		ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:4:11-37
 		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
 		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
+application
+ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:5-19
 uses-sdk
-ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:5-46
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:5-46
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:5-46
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:5-46
-INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:5-46
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
+INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:15-44
 		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
+		ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
 		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
-		ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:6:5-46
+		ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
 		INJECTED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml
-application
-ADDED from E:\android_studio_workspace\NetworkManagement1.1\xUtiLib\src\main\AndroidManifest.xml:7:5-19
